@@ -98,6 +98,11 @@ lanelet::ConstLanelets query::shoulderLanelets(const lanelet::ConstLanelets & ll
   return query::subtypeLanelets(lls, "road_shoulder");
 }
 
+lanelet::ConstLanelets query::bicycleLanelets(const lanelet::ConstLanelets & lls)
+{
+  return query::subtypeLanelets(lls, lanelet::AttributeValueString::BicycleLane);
+}
+
 std::vector<lanelet::TrafficLightConstPtr> query::trafficLights(
   const lanelet::ConstLanelets & lanelets)
 {
