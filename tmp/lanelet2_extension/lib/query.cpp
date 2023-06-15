@@ -103,6 +103,11 @@ lanelet::ConstLanelets query::bicycleLanelets(const lanelet::ConstLanelets & lls
   return query::subtypeLanelets(lls, lanelet::AttributeValueString::BicycleLane);
 }
 
+lanelet::ConstLanelets query::sharedBicycleLanelets(const lanelet::ConstLanelets & lls)
+{
+  return query::subtypeLanelets(lls, "shared_bicycle_lane");
+}
+
 std::vector<lanelet::TrafficLightConstPtr> query::trafficLights(
   const lanelet::ConstLanelets & lanelets)
 {

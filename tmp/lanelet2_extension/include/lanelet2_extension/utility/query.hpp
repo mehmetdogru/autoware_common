@@ -97,6 +97,12 @@ lanelet::ConstLanelets shoulderLanelets(const lanelet::ConstLanelets & lls);
  */
 lanelet::ConstLanelets bicycleLanelets(const lanelet::ConstLanelets & lls);
 /**
+ * [sharedBicycleLanelets extracts shared bicycle lanelets // participants: vehicle, bicycle]
+ * @param  lls [input lanelets with subtype shared_bicycle_lane]
+ * @return     [shared bicycle lanelets]
+ */
+lanelet::ConstLanelets sharedBicycleLanelets(const lanelet::ConstLanelets & lls);
+/**
  * [trafficLights extracts Traffic Light regulatory element from lanelets]
  * @param lanelets [input lanelets]
  * @return         [traffic light that are associated with input lanelets]
